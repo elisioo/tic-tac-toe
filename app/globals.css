@@ -212,6 +212,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--yellow); outlin
 .board-victory .board {opacity:.16;filter:blur(2px);}
 .victory-display {--victory-color:var(--cyan);position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;border-radius:17px;background:radial-gradient(ellipse,#152b4ae6,#070b1c99);pointer-events:none;animation:victoryAppear .5s ease-out both;}
 .victory-o {--victory-color:var(--purple);}
+.victory-draw {--victory-color:var(--yellow);}
 .victory-rays {position:absolute;inset:-60%;background:repeating-conic-gradient(from 0deg,transparent 0deg 20deg,color-mix(in srgb,var(--victory-color) 12%,transparent) 20deg 30deg);animation:victorySpin 24s linear infinite;mask-image:radial-gradient(circle,#000,transparent 65%);}
 .victory-label {z-index:1;font:800 clamp(8px,2vw,11px)/1.4 monospace;letter-spacing:3px;color:var(--yellow);}
 .victory-image {position:relative;width:76%;height:65%;object-fit:contain;filter:drop-shadow(0 0 22px var(--victory-color));animation:victoryFloat 2.5s ease-in-out infinite;}

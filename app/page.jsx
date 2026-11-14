@@ -295,17 +295,17 @@ export default function Home() {
                 <h2>GALACTIC GRID</h2>
                 <span>3 × 3 SECTORS</span>
               </div>
-              <div className={`board-wrap ${winner ? "board-victory" : ""}`}>
-                {winner && (
-                  <div className={`victory-display victory-${winner.toLowerCase()}`}>
+              <div className={`board-wrap ${gameOver ? "board-victory" : ""}`}>
+                {gameOver && (
+                  <div className={`victory-display victory-${isDraw ? "draw" : winner.toLowerCase()}`}>
                     <div className="victory-rays" aria-hidden="true" />
-                    <span className="victory-label">GALACTIC CHAMPION</span>
+                    <span className="victory-label">{isDraw ? "GALACTIC STALEMATE" : "GALACTIC CHAMPION"}</span>
                     <img
                       className="victory-image"
-                      src={`/characters/winner_${winner === "X" ? "astro" : "ufo"}.png`}
-                      alt={`${LABELS[winner]} celebrating victory`}
+                      src={isDraw ? "/characters/draw.png" : `/characters/winner_${winner === "X" ? "astro" : "ufo"}.png`}
+                      alt={isDraw ? "Astro and UFO draw" : `${LABELS[winner]} celebrating victory`}
                     />
-                    <strong>{LABELS[winner]} wins!</strong>
+                    <strong>{isDraw ? "It's a cosmic draw!" : `${LABELS[winner]} wins!`}</strong>
                   </div>
                 )}
                 {winner && (

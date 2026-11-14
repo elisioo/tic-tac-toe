@@ -69,6 +69,7 @@ The page uses these files from `public/characters/`:
 - `ufo.png`: UFO turn indicator.
 - `winner_astro.png`: Celebration image when Astro wins.
 - `winner_ufo.png`: Celebration image when UFO wins.
+- `draw.png`: Centered result image when a round ends in a draw.
 
 Replace these files to customize the artwork while keeping the same filenames. Board pieces use inline SVG illustrations in `app/page.jsx`.
 
